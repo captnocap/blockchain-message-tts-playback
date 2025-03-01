@@ -24,7 +24,7 @@
 
 ### Containerization: Docker
 
-### Text-to-Speech: (Zyphra/Zonos)[https://github.com/Zyphra/Zonos]
+### Text-to-Speech: [Zyphra/Zonos](https://github.com/Zyphra/Zonos)
 
 ## Getting Started
 
