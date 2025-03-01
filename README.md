@@ -71,5 +71,3 @@ Contributions are welcome! Please read the CONTRIBUTING.md for guidelines on how
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Acknowledgements
-(List any acknowledgements, inspirations, or third-party resources)
