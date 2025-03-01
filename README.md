@@ -20,7 +20,7 @@
 
 ### Backend: Node.js, TypeScript, Express
 
-### Blockchain: Solana, Monero
+### Blockchain: Ethereum, Solana, Monero
 
 ### Containerization: Docker
 
