@@ -22,8 +22,6 @@
 
 ### Blockchain: Solana, Monero
 
-### Database: (Specify your database, e.g., MongoDB, PostgreSQL)
-
 ### Containerization: Docker
 
 ### Text-to-Speech: (Zyphra/Zonos)[https://github.com/Zyphra/Zonos]
