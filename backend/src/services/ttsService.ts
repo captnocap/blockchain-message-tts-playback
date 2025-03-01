@@ -2,6 +2,7 @@ import { Client } from "@gradio/client";
 import fs from "fs";
 import path from "path";
 import config from "../config";
+import axios from "axios";
 
 export async function generateAudio(text: string): Promise<string> {
   try {
@@ -60,5 +61,31 @@ export async function generateAudio(text: string): Promise<string> {
   } catch (error) {
     console.error("Error generating audio:", error);
     throw error;
+  }
+}
+
+export async function processTTS(
+  message: string,
+  settings: any
+): Promise<string | null> {
+  try {
+    const response = await axios.post(
+      "http://localhost:7860/generate_audio",
+      {
+        text: message,
+        model_choice: settings.model_choice || "Zyphra/Zonos-v0.1-transformer",
+        language: "en-us",
+        pitch_std: settings.pitch_std || 50,
+        speaking_rate: settings.speaking_rate || 15,
+      },
+      { responseType: "arraybuffer" }
+    );
+
+    const fileName = `./audio/${Date.now()}.wav`;
+    fs.writeFileSync(fileName, response.data);
+    return fileName;
+  } catch (error) {
+    console.error("TTS Error:", error);
+    return null;
   }
 }
